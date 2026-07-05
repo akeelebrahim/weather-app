@@ -2,17 +2,9 @@
 import streamlit as st
 import pandas as pd
 
-def display_all():
-    """Display all observations"""
-    df = pd.read_csv('weather_observations.csv')
-    #st.write("Heluuuuuuuuuuuu-----++++++++++++")
-    #st.dataframe(df)
-    st.write(df)
-    return
 
-
+#-------------------------------------------------------------------------Menu option 1
 # This function for adding new observation
-
 def add_observation(date_str, temp, condition, humidity, wind, filename="weather_observations.csv"):
     # 1. Read my csv file that I put in the same path
     df = pd.read_csv(filename)
@@ -24,9 +16,8 @@ def add_observation(date_str, temp, condition, humidity, wind, filename="weather
     # 3. Save it back
     df.to_csv(filename, index=False)
 
-
+#-------------------------------------------------------------------------Menu option 2
 # This function is for viewing weather stats
-
 def get_weather_stats(filename="weather_observations.csv"):
     """
     Grabs our weather data file and calculates the core metrics 
@@ -50,6 +41,7 @@ def get_weather_stats(filename="weather_observations.csv"):
     
     return stats
 
+#-------------------------------------------------------------------------Menu option 3
 def search_by_date(target_date, filename="weather_observations.csv"):
     """
     Filters our weather database to find rows matching a specific date.
@@ -63,8 +55,13 @@ def search_by_date(target_date, filename="weather_observations.csv"):
     
     return matching_rows
 
-#-------------------------------------------------------------------------Menu option 1
-#-------------------------------------------------------------------------Menu option 2
-#-------------------------------------------------------------------------Menu option 3
+
 #-------------------------------------------------------------------------Menu option 4
+def display_all():
+    """Display all observations"""
+    df = pd.read_csv('weather_observations.csv')
+    #st.write("Heluuuuuuuuuuuu-----++++++++++++")
+    #st.dataframe(df)
+    st.write(df)
+    return
 

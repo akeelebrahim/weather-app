@@ -4,6 +4,7 @@ import pandas as pd
 from datetime import datetime
 import weather_utils as utils  # Import the helper logic
 
+
 icon_image = Image.open("weather_icon.png")
 
 st.set_page_config(
@@ -11,6 +12,7 @@ st.set_page_config(
     page_icon=icon_image,
     layout="wide"
 )
+
 
 st.title("🌦️ Weather Observation App")
 
