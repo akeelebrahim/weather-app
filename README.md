@@ -22,3 +22,8 @@ The app is fully localized to handle the unique weather patterns of Bahrain, fro
 3. Open your terminal in the project folder and run:
    ```bash
    streamlit run main_app.py
+
+## Resources:
+* Report by Ministry of Transportation and Telecommunications
+* Title: METEOROLOGICAL DIRECTORATE CLIMATE SECTION
+* Link: https://www.bahrainweather.gov.bh/files/climate/monthly-climate-summary.pdf
